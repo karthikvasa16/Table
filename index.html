@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Table with PDF Download</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Dynamic Table with PDF Download</h1>
+    <div class="form-container">
+      <input type="text" id="nameInput" placeholder="Enter name" />
+      <select id="roleInput">
+        <option value="" disabled selected>Select role</option>
+        <option value="Developer">Developer</option>
+        <option value="Designer">Designer</option>
+        <option value="Manager">Manager</option>
+        <option value="Tester">Tester</option>
+      </select>
+      <select id="statusInput">
+        <option value="" disabled selected>Select status</option>
+        <option value="Active">Active</option>
+        <option value="Inactive">Inactive</option>
+        <option value="Pending">Pending</option>
+      </select>
+      <button id="addButton">Add Entry</button>
+    </div>
+
+    <!-- Advanced Search Bar -->
+    <div class="search-container">
+      <input type="text" id="searchName" placeholder="Search by name" />
+      <select id="searchRole">
+        <option value="" selected>All roles</option>
+        <option value="Developer">Developer</option>
+        <option value="Designer">Designer</option>
+        <option value="Manager">Manager</option>
+        <option value="Tester">Tester</option>
+      </select>
+      <select id="searchStatus">
+        <option value="" selected>All statuses</option>
+        <option value="Active">Active</option>
+        <option value="Inactive">Inactive</option>
+        <option value="Pending">Pending</option>
+      </select>
+      <button id="searchButton">Search</button>
+      <button id="clearSearchButton">Clear</button>
+    </div>
+
+    <!-- Table -->
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th>S No.</th>
+          <th>Name</th>
+          <th>Role</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rows will be dynamically added here -->
+      </tbody>
+    </table>
+
+    <!-- Download Button -->
+    <div class="download-container">
+      <button id="downloadPDFButton">Download as PDF</button>
+    </div>
+  </div>
+
+  <!-- Include jsPDF and autoTable -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
